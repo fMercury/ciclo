@@ -1,11 +1,9 @@
 language: node_js
 node_js:
   - lts/*
-  - 9
 addons:
   sonarcloud: true
 script:
-  -npm run cover \
   -sonar-scanner
   -Dsonar.projectKey=fMercury_ciclo
   -Dsonar.organization=fmercury-github
