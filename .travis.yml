@@ -4,11 +4,9 @@ node_js:
 addons:
   sonarcloud: true
 script:
-  - sonar-scanner
+  -sonar-scanner
   -Dsonar.projectKey=fMercury_ciclo
   -Dsonar.organization=fmercury-github
   -Dsonar.host.url=https://sonarcloud.io
   -Dsonar.login=1171e125d3d313bed2166fe59539c525d6b24115
   -Dsonar.sources='./app' -X
-after_success:
-  -npm run coveralls
